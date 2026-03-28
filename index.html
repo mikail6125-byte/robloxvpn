@@ -47,7 +47,7 @@
     /* ── HERO ── */
     .hero {
       text-align: center;
-      padding: 64px 20px 48px;
+      padding: 64px 20px 0;
       max-width: 700px;
       margin: 0 auto;
     }
@@ -93,36 +93,21 @@
       font-size: 0.75rem;
       padding: 18px 36px;
       border-radius: 6px;
-      border-bottom: 5px solid var(--blue-dark);
-      transition: transform 0.1s, border-bottom 0.1s;
+      box-shadow: 0 5px 0 var(--blue-dark);
+      transition: transform 0.1s, box-shadow 0.1s;
       line-height: 1.5;
     }
 
-    .btn:hover { transform: translateY(2px); border-bottom-width: 3px; }
-    .btn:active { transform: translateY(4px); border-bottom-width: 1px; }
+    .btn:hover { transform: translateY(2px); box-shadow: 0 3px 0 var(--blue-dark); }
+    .btn:active { transform: translateY(5px); box-shadow: 0 0px 0 var(--blue-dark); }
 
     .hero-note {
-      margin-top: 16px;
+      margin-top: 20px;
+      padding-top: 20px;
       font-size: 0.85rem;
       color: #4a7aaa;
     }
 
-    /* ── PIXEL DIVIDER ── */
-    .pixel-divider {
-      display: flex;
-      justify-content: center;
-      gap: 6px;
-      padding: 8px 0 40px;
-    }
-
-    .pixel-divider span {
-      width: 12px; height: 12px;
-      background: var(--blue);
-      display: inline-block;
-      opacity: 0.25;
-    }
-
-    .pixel-divider span:nth-child(3) { opacity: 1; }
 
     /* ── FEATURES ── */
     .features {
@@ -130,7 +115,7 @@
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
       max-width: 900px;
-      margin: 0 auto 64px;
+      margin: 48px auto 64px;
       padding: 0 20px;
     }
 
@@ -272,10 +257,6 @@
     <p class="hero-note">Переход в Telegram-бот · Без регистрации на сайте</p>
   </section>
 
-  <div class="pixel-divider">
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
-
   <section class="features">
     <div class="feature-card">
       <div class="feature-icon">
@@ -364,7 +345,7 @@
   </section>
 
   <footer>
-    © 2026 4Safe VPN · All rights reserved
+    © 2026 4Safe VPN · Все права защищены
   </footer>
 
 </body>
